@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="p-4 rounded shadow"
+     style="background: #f5dbfe; border-left:5px solid #75347e;">
+
+<h2 class="text-warning mb-4">Add Jacket</h2>
+
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<button class="btn btn-warning w-100 fw-bold">Add Jacket</button>
+
+</form>
+
+</div>
+
+{% endblock %}
